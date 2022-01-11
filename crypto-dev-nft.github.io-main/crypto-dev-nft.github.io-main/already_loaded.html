@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="next-head-count" content="3">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css-loader.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="script/main_script_browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        function myFunction(x) {
+        x.classList.toggle("change");
+            if($('.Menu').hasClass('Expanded')){
+                $('.Menu').removeClass('Expanded')
+            }else{
+                $('.Menu').addClass('Expanded')
+            }
+        }
+        //THEME CHANGE
+        function changeTheme(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+            
+            let theme = localStorage.getItem("theme");
+            console.log(theme)
+            if (theme && theme === "light-mode") {
+                localStorage.setItem("theme", "");
+            } else {
+                localStorage.setItem("theme", "light-mode");
+            }
+
+            document.getElementById("theme").textContent = localStorage.getItem("theme");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="Linescontainer" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    <div id="theme" style="display:none;"></div>
+    <canvas id="nokey" width="800" height="800">
+        Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+    </canvas>
+    <div class="loader loader-border" style="display:none;"></div>
+    <div class="header preloadHeader">
+        <div class="w3-bar preloadHeader">
+            <div class="HeaderImgContainer preloadImg">
+                <img src="../crypto-dev-nft.github.io-main/img/logo.png" alt="Logo" class="Home" >
+            </div>
+            
+             
+            
+            <div class="accountsContainer scrolled-up  preloadAccounts">
+                <div class="account_1111 Indiv_account" id="accounts">
+                    0x2445b2fcf6c6e62dcede72d2b0b993d536982fab
+               </div>
+            </div>
+        </div>    
+    </div>
+    <div class=" nftContainer">
+        <!-- <h1>Pulsar</h1> 
+        <p>Universal NFT viewer</p>-->
+        
+        <div class="Container">
+        
+        <div id="loadedContainer">
+            <div  class="gridContainer">
+                <div class="accordHead" data-acc="accordBaker">
+            <h2>Bakery NFTs<img src="../crypto-dev-nft.github.io-main/img/logos/bakery.png" style="height: 40px;margin-left: 10px;"></h2>
+            </div>
+            
+                <div id="accordBaker" class="grid accord collapsed" >
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item">
+                <figure><a href="https://d1vyp5kjqdxn2l.cloudfront.net/cdnstatic/shib/Silver.png"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : <li> Selling Price History : 2<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img> </li><li> Current Price : 10<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="SHIB Army NFT Silver Edition" data-type="image"><img alt="image"
+                            src="https://d1vyp5kjqdxn2l.cloudfront.net/cdnstatic/shib/Silver.png"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">SHIB Army NFT Silver Edition</span></figcaption>
+                </figure>
+                </div>
+                <div class="grid-item">
+                <figure><a
+                        href="https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/7f4a35e716c04a2d8a205b3aba99651d.jpg"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : From star to star, from planet to planet. Through hyperspace.<li> Current Price : 25<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="Hyperspace leap" data-type="image"><img alt="image"
+                            src="https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/7f4a35e716c04a2d8a205b3aba99651d.jpg"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">Hyperspace leap</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/b4bbe72bbb094a4b933d859f8cb81171.jpg"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : 城市的繁华与压抑感
+The prosperity and depression of the city<li> Current Price : 1368385838<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="Looking UP" data-type="image"><img alt="image"
+                            src="https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/b4bbe72bbb094a4b933d859f8cb81171.jpg"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">Looking UP</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/217c1d88f0a54db093bfdf7057397c7a.png"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : The very first AfroPunk of its name, this NFT was inspired by NBA player LeBron James of the Los Angeles Lakers. The number '23' signals the iconic number he has worn on the way to multiple championship and MVP titles. 
+
+The AfroPunk Prelude Collection is a collection of 100 NFT's inspired by individuals who have proven themselves in different areas of life. 
+It also gives an entry to the upcoming AfroPunk universe.<li> Current Price : 25<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="AfroPunk-The Prelude Collection #001" data-type="image"><img alt="image"
+                            src="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/217c1d88f0a54db093bfdf7057397c7a.png"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">AfroPunk-The Prelude Collection #001</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/d1b56021ba624489be0960897516f02d.mp3"
+                        data-description="null<li> Current Price : 500<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"><audio
+                            controls="controls"
+                            src="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/d1b56021ba624489be0960897516f02d.mp3"
+                            style=" width: 100%;"></audio></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">M.M WORLD</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/b9ce1ace33d7468b9eafb0f2e8bee5b5.jpeg"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : Bellevue de bellevue<li> Current Price : 1368385838<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="Bellevue de bellevue" data-type="image"><img alt="image"
+                            src="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/b9ce1ace33d7468b9eafb0f2e8bee5b5.jpeg"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">Bellevue de bellevue</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/5330826e6f85469e94ff3d573bd63861.png"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : DSC MASCOT POP BRUSH card #11<li> Current Price : 1368385838<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="DSC MASCOT POP BRUSH card #11" data-type="image"><img alt="image"
+                            src="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/5330826e6f85469e94ff3d573bd63861.png"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">DSC MASCOT POP BRUSH card #11</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/30f4c14d29e443c199018bd8f2443e3c.png"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : Warm element in cold streets.<li> Current Price : 6.5<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="Urban Fire" data-type="image"><img alt="image"
+                            src="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/30f4c14d29e443c199018bd8f2443e3c.png"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">Urban Fire</span></figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure><a
+                        href="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/a129e61e9fd54b35a9a22824615afc37.jpeg"
+                        class="" data-desc-position="right"
+                        data-description="<h6>NFT Description</h6><ul> <li>Description : Bee<li> Current Price : 1000<img src=&quot;https://www.bakeryswap.org/images/bakery/icon_bake.svg&quot; width=&quot;13px&quot; height=&quot;13px&quot; alt=&quot;&quot; style=&quot;margin-right: 5px; margin-bottom: -2px;&quot;></img></li></ul>"
+                        data-title="Bee" data-type="image"><img alt="image"
+                            src="https://d2mzn4jmmon2v7.cloudfront.net/static/nfts/artworks/a129e61e9fd54b35a9a22824615afc37.jpeg"
+                            style=" width: 100%;"></a>
+                    <figcaption style="text-align: center;"><span class="capTitle">Bee</span></figcaption>
+                </figure>
+            </div>
+                </div>
+            </div>
+            
+            
+            <div class="gridContainer">
+                <div class="accordHead" data-acc="accordOpenSea">
+                    <h2>Opensea NFTs<img src="../crypto-dev-nft.github.io-main/img/logos/opensea.jpg" style="height: 40px;margin-left: 10px;"></h2>
+                </div>
+                <div id="accordOpenSea" class="grid accord collapsed">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/u7-PhZVvYBm62MHPAfrslgYtw2CYwm8ik5zJkYrwuRadsYFX_JyT4if2dnvSKqp448GaQnC5EqpHBnaaNDydjTZkW1TiWAeCvNIy"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Wonky Stonks is the first of its kind; a fully generative, financially-inspired NFT collection for investors, traders, and quants alike.</li></ul></ul>"
+                            data-title="Wonky Stonk #6657" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/u7-PhZVvYBm62MHPAfrslgYtw2CYwm8ik5zJkYrwuRadsYFX_JyT4if2dnvSKqp448GaQnC5EqpHBnaaNDydjTZkW1TiWAeCvNIy"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Wonky Stonk #6657</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/NnFeMlEZGsAZwr_Afu-5_5WzMIy8GzZ-u00-iHYg9e3b0gWTIuvd5ummznGTDVMl6ToI6UvzFupp_loaoub9_2-0ztScw0t7r3Z9"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : The Sacred First Born of the Ancient One. In them, her legacy is forever entwined.</li></ul></ul>"
+                            data-title="Evolving Forest #8913" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/NnFeMlEZGsAZwr_Afu-5_5WzMIy8GzZ-u00-iHYg9e3b0gWTIuvd5ummznGTDVMl6ToI6UvzFupp_loaoub9_2-0ztScw0t7r3Z9"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Evolving Forest #8913</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/86A04hG-kPebLi9-qGDNV5SSgPNFFwxr7Ra6DKqWeRgc9XZSBky-Vmfmu0DPXdIal68ORr_sZskzf8WmjtfXvH4lwslbMEWv0tNl"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : The Sacred First Born of the Ancient One. In them, her legacy is forever entwined.</li></ul></ul>"
+                            data-title="Evolving Forest #8910" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/86A04hG-kPebLi9-qGDNV5SSgPNFFwxr7Ra6DKqWeRgc9XZSBky-Vmfmu0DPXdIal68ORr_sZskzf8WmjtfXvH4lwslbMEWv0tNl"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Evolving Forest #8910</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/eYfOQ8HRG7JT67PW30M20uaB4LtlCu2nMYC8J83QB6d0hZdXavDTNWioqIpkGItkdiqeWDH7NQtUp5vpswxm_uTvWcNqQ60U2GfPzuc"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : The Sacred First Born of the Ancient One. In them, her legacy is forever entwined.</li></ul></ul>"
+                            data-title="Evolving Forest #8909" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/eYfOQ8HRG7JT67PW30M20uaB4LtlCu2nMYC8J83QB6d0hZdXavDTNWioqIpkGItkdiqeWDH7NQtUp5vpswxm_uTvWcNqQ60U2GfPzuc"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Evolving Forest #8909</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/OIgW8fmttpgBEQVN0gEteAA9L3xi0aIgpfGBKX_eMd5ct2Du5p7QEcZP_9qR0CFZw8l5VRT0d45OWqvDS4H2QEQIly5l4sy_vH4fhg"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : The Sacred First Born of the Ancient One. In them, her legacy is forever entwined.</li></ul></ul>"
+                            data-title="Evolving Forest #8428" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/OIgW8fmttpgBEQVN0gEteAA9L3xi0aIgpfGBKX_eMd5ct2Du5p7QEcZP_9qR0CFZw8l5VRT0d45OWqvDS4H2QEQIly5l4sy_vH4fhg"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Evolving Forest #8428</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/N4z-ht4gb_oGG8TLtVjfnh2CZ06RbxGCS0Wkr0kU0pt-77ujv7duff6x7KVt0igxGLkvWn2tNeOyhfu8E5dppBY4SmvXetwB9DT0ew"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : The Sacred First Born of the Ancient One. In them, her legacy is forever entwined.</li></ul></ul>"
+                            data-title="Evolving Forest #8424" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/N4z-ht4gb_oGG8TLtVjfnh2CZ06RbxGCS0Wkr0kU0pt-77ujv7duff6x7KVt0igxGLkvWn2tNeOyhfu8E5dppBY4SmvXetwB9DT0ew"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Evolving Forest #8424</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/fe82d60d3286c170fb393ec75d1289f8.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TARA" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/fe82d60d3286c170fb393ec75d1289f8.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TARA</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/60accbdff968a8673dfb368028e2d503.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TENSORX" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/60accbdff968a8673dfb368028e2d503.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TENSORX</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/fd9bacff5c540f0a35427aa1721f679a.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="VEGA" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/fd9bacff5c540f0a35427aa1721f679a.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">VEGA</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/e98d36f0e9e96d71befb415643158c6e.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TENSORX" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/e98d36f0e9e96d71befb415643158c6e.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TENSORX</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/883a6b597d7b085767b12000a83fb680.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TENSORX" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/883a6b597d7b085767b12000a83fb680.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TENSORX</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/bf4149268aff7b3ee538c7715dd51baa.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TENSORX" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/bf4149268aff7b3ee538c7715dd51baa.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TENSORX</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/e98d36f0e9e96d71befb415643158c6e.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TENSORX" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/e98d36f0e9e96d71befb415643158c6e.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TENSORX</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/834e9b789028d1ebcd14ace1fe2f2ee8.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="MOONA" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/834e9b789028d1ebcd14ace1fe2f2ee8.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">MOONA</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/50af992c9009cffc0845a6e64c853c5d.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : OTO Motors UltraSport is our medium level model created specifically for the blockchain NFT metaverse. The modern aerodynamics of our UltraSport series, pushes the limits of power and mechanical grip and allows it to reach amazing high speeds on straightaways, enhanced by its versatile design giving the car effortless handling on chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="SIRIUS" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/50af992c9009cffc0845a6e64c853c5d.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">SIRIUS</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/a92e42fb110bf4c4a7409cede4204f83.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : SuperSport OTO Motors is the entry level model built specifically for the blockchain NFT metaverse. The modern aerodynamics of our SuperSport series allows it to reach the highest speeds on straightaways, and its versatile design gives the car effortless handling around chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="TARA" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/a92e42fb110bf4c4a7409cede4204f83.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">TARA</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/9bbd537831e443bab20b17006f93932c.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : The enhanced UltraSport Special Edition makes a bold statement with an all carbon fibre body, custom built for the blockchain NFT metaverse. The modern aerodynamics of our UltraSport SE, pushes the limits of power and mechanical grip and allows it to reach amazing speeds on straightaways, enhanced by its versatile design giving the car effortless handling on chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="CERIUM" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/9bbd537831e443bab20b17006f93932c.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">CERIUM</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a href="https://storage.opensea.io/files/4808f6352371d4ad969571d1e46017cb.mp4"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : OTO Motors UltraSport is our medium level model created specifically for the blockchain NFT metaverse. The modern aerodynamics of our UltraSport series, pushes the limits of power and mechanical grip and allows it to reach amazing high speeds on straightaways, enhanced by its versatile design giving the car effortless handling on chicanes and sharp turns. No matter which level of the OTOMotors car you have, practicing and racing it will transform it into a hyper speed monster!</li></ul></ul>"
+                            data-title="CERIUM" data-type="video"><video autoplay="true" loop="true" muted="true"
+                                src="https://storage.opensea.io/files/4808f6352371d4ad969571d1e46017cb.mp4"
+                                style=" width: 100%;"></video></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">CERIUM</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/eH_Tb9EHP3e8DuAs21PQSee0ZP_-L0gRhgKHsX52RMmJsnuBsaocVk9EdLXKY2avEU3ayvFlT1_EHXLV9-gB9DPU4_LHg4HDFDNKxJw"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li><li> Selling Price History : 0.2389ETH,0.17WETH</li> <li> Current Price : 0.156WETH</li></ul><h6>Attributes rarity</h6><ul><li>Generation : 1 (0.0%)</li><li>Wrist : Gold Watch (10.3%)</li><li>Background : Common (90.7%)</li><li>Tribe : Cat (14.8%)</li><li>Eye Color : Sparky Blue (8.7%)</li><li>Piercing : Diamond Stud (7.6%)</li><li>Fur Color : Primrose Path (2.8%)</li><li>Pupil Color : Bonne Nuit (8.1%)</li><li>Skin Color : Baleine Blue (6.7%)</li><li>Top : Red Longsleeve (0.7%)</li><li>Beard : Beige Curtain (0.6%)</li><li>Extra Trait Count : 4 (0.0%)</li></ul><h6>Collection Data </h6><ul><li> Current Floor Price : 0</li><li> Total Volume : 3042.61291836123</li></ul> </ul>"
+                            data-title="DEGEN #9609" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/eH_Tb9EHP3e8DuAs21PQSee0ZP_-L0gRhgKHsX52RMmJsnuBsaocVk9EdLXKY2avEU3ayvFlT1_EHXLV9-gB9DPU4_LHg4HDFDNKxJw"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">DEGEN #9609</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/j1Q-xw-X_652rjCNAdVT91crftLHA_9tr8brXnCKzo-W45V5CthrMPSa7rS6V1SEsBJ9vVlRDDGu9MPRnpYTjyzjYd9YZBKRvX__Eg"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li></ul></ul>"
+                            data-title="DEGEN #8426" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/j1Q-xw-X_652rjCNAdVT91crftLHA_9tr8brXnCKzo-W45V5CthrMPSa7rS6V1SEsBJ9vVlRDDGu9MPRnpYTjyzjYd9YZBKRvX__Eg"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">DEGEN #8426</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/4pvA2HcxASJ2wjXcAmgeokOTrSd0fIe42v9Lj82Pbw-mJd_xQyp0CcSVc3ght2vI1UHzCNgqYNEVv9ykmJsY6t8jG4vhkHTFW9GaLQ"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li></ul></ul>"
+                            data-title="DEGEN #7926" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/4pvA2HcxASJ2wjXcAmgeokOTrSd0fIe42v9Lj82Pbw-mJd_xQyp0CcSVc3ght2vI1UHzCNgqYNEVv9ykmJsY6t8jG4vhkHTFW9GaLQ"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">DEGEN #7926</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/oP8Km03x8PX5Pwi8J9CyIdCf-WsDKZAXIM0V1HEyPEuqCnKG06var5Q4VJ4j6Oiqmbj2KURLtIHbnA0BTEG4GdT8drDVhcEQ02k3Dw"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li></ul></ul>"
+                            data-title="Party boyz" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/oP8Km03x8PX5Pwi8J9CyIdCf-WsDKZAXIM0V1HEyPEuqCnKG06var5Q4VJ4j6Oiqmbj2KURLtIHbnA0BTEG4GdT8drDVhcEQ02k3Dw"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Party boyz</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/U9f9rcvXR9OmgsjAbWNo1zRaRcnKrC2HHf8HYQEObPbS_ncAFrulekVXMNT2Y7oXD8NAIiG8Gdr6emAEI16QUDH7i8k0oWEop18iSWw"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li></ul></ul>"
+                            data-title="DEGEN #6930" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/U9f9rcvXR9OmgsjAbWNo1zRaRcnKrC2HHf8HYQEObPbS_ncAFrulekVXMNT2Y7oXD8NAIiG8Gdr6emAEI16QUDH7i8k0oWEop18iSWw"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">DEGEN #6930</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/JrAQv21yWanpzEXguxMDGcX_7xIxX411ephrCBX7KKrhoIaXI3yn87XFabJp0Dy_Y9EWUoL8JgPHJmSfBSOoonLF0AdCh_InuV1bk28"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li></ul></ul>"
+                            data-title="DEGEN #5380" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/JrAQv21yWanpzEXguxMDGcX_7xIxX411ephrCBX7KKrhoIaXI3yn87XFabJp0Dy_Y9EWUoL8JgPHJmSfBSOoonLF0AdCh_InuV1bk28"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">DEGEN #5380</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/mvYzLnk6IUQTXaMgBuXO7i8IB3l2sEiWpTLIvAMCUFYbSVOExKG4M5mNn9pF7OqmHfp88uCoye3N-fHL51J7XAacQ2R7C4dupE4jz_I"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Original collection of your favorite 10k DEGENs 🎮</li></ul></ul>"
+                            data-title="DEGEN #2856" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/mvYzLnk6IUQTXaMgBuXO7i8IB3l2sEiWpTLIvAMCUFYbSVOExKG4M5mNn9pF7OqmHfp88uCoye3N-fHL51J7XAacQ2R7C4dupE4jz_I"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">DEGEN #2856</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/nVP_JTBnt3C1eO5KIuSsqg6vr2f-0uT5Ml7kzs-a74q3Mxc_N22dkklaWy8jd65DnKppv4pBLj7XNL_rHB1Qpp6No3vqt-SLr3sT1A"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Commemorative NFT art collection created from popular crypto moments. Art is generated from on-chain transaction data related to the moment in blockchain history. 
+
+    Collection 1 - DAO Hack
+
+    Transaction Hash: 0x0ec3f2488a93839524add10ea229e773f6bc891b4eb4794c3337d4495263790b
+
+    On June 17, 2016, 'The DAO' was subject to an attack, exploiting a combination of vulnerabilities, including the one concerning recursive calls, that resulted in the transfer of 3.6 Million Ether - which was around a third of the 11.5 Million Ether committed to The DAO - valued at the time at around $50M</li></ul></ul>"
+                            data-title="Crypto Moments - Dao Hack #47" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/nVP_JTBnt3C1eO5KIuSsqg6vr2f-0uT5Ml7kzs-a74q3Mxc_N22dkklaWy8jd65DnKppv4pBLj7XNL_rHB1Qpp6No3vqt-SLr3sT1A"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Crypto Moments - Dao Hack #47</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/jW8MnWkWhZVtxSAyu3HXr1toV24nMNHGmrY3L3dvkBbjrJFdUJ1iBWs5c7kE7rse30-1lP0bKmmQJqsT7N_BhTY1MdFNZAKaa5cCjpI"
+                            class="glightbox-opensea" data-desc-position="right" data-description="<h6>NFT Description</h6><ul> <li>Description : EtherLambos were created prior to the ERC-721 standard was adopted. This vault contains the rarest of all EtherLambos, the coveted Satoshi model (Serial #79/100).
+
+
+
+    View contents of NFT by expanding Properties Below and at Emblem.Finance 👇
+
+    [View this NFT on Emblem.Finance](https://emblem.finance/nft?id=8559641083261)</li></ul></ul>"
+                            data-title="(Empty Vault) EtherLambos Satoshi No. 79" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/jW8MnWkWhZVtxSAyu3HXr1toV24nMNHGmrY3L3dvkBbjrJFdUJ1iBWs5c7kE7rse30-1lP0bKmmQJqsT7N_BhTY1MdFNZAKaa5cCjpI"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">(Empty Vault) EtherLambos Satoshi No. 79</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/5Bp8jwbhsJdG5INbrHmRCtxw5ycXJhIWdWXePDiUuNDppXFpwGkZ5rcrYPLat1SnnJ7EKB8XPJOTgvqRHRMMybmGZopAC9smc93h"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Good call.</li></ul></ul>"
+                            data-title="EtherLambos: Zzvoe32 NGMI - Delete Account" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/5Bp8jwbhsJdG5INbrHmRCtxw5ycXJhIWdWXePDiUuNDppXFpwGkZ5rcrYPLat1SnnJ7EKB8XPJOTgvqRHRMMybmGZopAC9smc93h"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">EtherLambos: Zzvoe32 NGMI - Delete Account</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/gvsmNR6aHsayTuoodzeQnElRKgR4Z2S44aDDrN2_Ke4FFoUqbLTTOxQ28oVESvqGgN4cDGwiAWFI9TGpryrxH-AIKQ"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Charlie Litecoin Supercar</li></ul></ul>"
+                            data-title="Charlie Serial No.: 200" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/gvsmNR6aHsayTuoodzeQnElRKgR4Z2S44aDDrN2_Ke4FFoUqbLTTOxQ28oVESvqGgN4cDGwiAWFI9TGpryrxH-AIKQ"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Charlie Serial No.: 200</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/p-MWwqqdhYhEnwh2rcic4hIGp9yAwUVRAF6Adpjt-WIlv8MrSmVUqDRZ_4W8wrXoQOW4273Nd-qWtHo_LF6soFUlf-Szsx6Owwq7"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : null</li></ul></ul>"
+                            data-title="Weird Whales 1516" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/p-MWwqqdhYhEnwh2rcic4hIGp9yAwUVRAF6Adpjt-WIlv8MrSmVUqDRZ_4W8wrXoQOW4273Nd-qWtHo_LF6soFUlf-Szsx6Owwq7"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Weird Whales 1516</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/Ca9lB5FAYWUROZ_oT8fognI7NHh-bdn2_ckGHGhtrPmeT_9LfL5ZhN6R4U5VBQobC1iFPy6hYQfZscXnDGseI5NQKyxvHOwIy_c27w"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : null</li></ul></ul>"
+                            data-title="Weird Whales 1441" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/Ca9lB5FAYWUROZ_oT8fognI7NHh-bdn2_ckGHGhtrPmeT_9LfL5ZhN6R4U5VBQobC1iFPy6hYQfZscXnDGseI5NQKyxvHOwIy_c27w"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Weird Whales 1441</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/QYBgDs_OIiEZ5YEFgxazDTgHZszu2gw9HHGgp5dKug6OeiuW3uQX9N8JDaB_BYNv_MCyas4VC3-5bc-MXI93fpXGMTXrjgb7K8UtsIc"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : null</li></ul></ul>"
+                            data-title="Weird Whales 305" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/QYBgDs_OIiEZ5YEFgxazDTgHZszu2gw9HHGgp5dKug6OeiuW3uQX9N8JDaB_BYNv_MCyas4VC3-5bc-MXI93fpXGMTXrjgb7K8UtsIc"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Weird Whales 305</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/TnvAdH_3XC-Y_lxQxf94dxR1wP0nTV-cbCgBRnaOZJvLYXDzD8WnRPxtpxBEQMyIPHMEEUlKfpBWDwQGR9b6LdHwdR1LUZqjb8_u"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Presented by PVLACE of 808 Mafia. This unique NFT experience offers 350 Tokens that are attached to a unique musical composition and artwork. Each NFT can be redeemed for its corresponding sound file in full length &amp; quality as well as granting full ownership, allowing the composition to be licensed/copywritten by the NFT holder for any commercial purpose, royalty-free. This is token 68 out of 350.</li></ul></ul>"
+                            data-title="PVLACE NFT #68/350 &quot;Ferne Welten&quot; (Sample)" data-type="image"><img
+                                alt="image"
+                                src="https://lh3.googleusercontent.com/TnvAdH_3XC-Y_lxQxf94dxR1wP0nTV-cbCgBRnaOZJvLYXDzD8WnRPxtpxBEQMyIPHMEEUlKfpBWDwQGR9b6LdHwdR1LUZqjb8_u"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">PVLACE NFT #68/350 "Ferne Welten" (Sample)</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/mq6JjLpOAbAkHPZBReoff7U-ozzbOYalpC4Z9CmapP6tdBflR62H1TbwYXwdiPsy1XwZT5uuzIdrlfFwdIF6kWrR6n5loSQ5xUvn_Q"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Presented by PVLACE of 808 Mafia. This unique NFT experience offers 350 Tokens that are attached to a unique musical composition and artwork. Each NFT can be redeemed for its corresponding sound file in full length &amp; quality as well as granting full ownership, allowing the composition to be licensed/copywritten by the NFT holder for any commercial purpose, royalty-free. This is token 67 out of 350.</li></ul></ul>"
+                            data-title="PVLACE NFT #67/350 &quot;Dark Pit&quot; (Sample)" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/mq6JjLpOAbAkHPZBReoff7U-ozzbOYalpC4Z9CmapP6tdBflR62H1TbwYXwdiPsy1XwZT5uuzIdrlfFwdIF6kWrR6n5loSQ5xUvn_Q"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">PVLACE NFT #67/350 "Dark Pit" (Sample)</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/Z7mBRxtgZpkAcP5yha1whZFon8MbbXv6uD-BJpfwbTXx4lvDI7SoWqLQzF1DbpJFRuu3g9_Kw06KaERojCKvYyRYYRVn0NL7sc9OUw"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : As he was walking through the dark woods of Uniswap, Chapo stumbled upon a shiny unicorn by the name of Rainicoin. This Unicorn whispered &quot;Follow me for generational wealth&quot;.
+
+    Chapo spent the next 4 days breaking Rainicoin, then on Day 5 hopped on &amp; said &quot;Giddy up bitch, we're going to the moon. Hooyahhhh!&quot;</li></ul></ul>"
+                            data-title="RAINI Ride To Riches" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/Z7mBRxtgZpkAcP5yha1whZFon8MbbXv6uD-BJpfwbTXx4lvDI7SoWqLQzF1DbpJFRuu3g9_Kw06KaERojCKvYyRYYRVn0NL7sc9OUw"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">RAINI Ride To Riches</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/l93Dg-dQZ2Vo8nKJ5B-kfwZyZ_hol2j-0lMsIsM8AUzl38HAL5HcLBgxeEtGSDIPZYeNLrIg8HqLUzI3mPP9ZMURPawi5sXyCBWg"
+                            class="glightbox-opensea" data-desc-position="right" data-description="<h6>NFT Description</h6><ul> <li>Description : The gods have blessed us all with early access to $RAINI, and Chapo will be sure to take full advantage.  On a colorful steed with a single spiraled horn, he will ride this beauty to the moon &amp; beyond.
+
+    Chapo has become a Rainicorn maximalist.</li></ul></ul>" data-title="Chapo's Magic Unicorn" data-type="image"><img
+                                alt="image"
+                                src="https://lh3.googleusercontent.com/l93Dg-dQZ2Vo8nKJ5B-kfwZyZ_hol2j-0lMsIsM8AUzl38HAL5HcLBgxeEtGSDIPZYeNLrIg8HqLUzI3mPP9ZMURPawi5sXyCBWg"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Chapo's Magic Unicorn</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/jGo1xx4mr8UY_n-ewfC0TfaeORHElxIpOuJkOFb12RP6HAzAc9pLCkHPbAz-eJYdxO2FNIzNP4Sg72LjgNP8xHdTluswoVSIR9MI"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : null</li></ul></ul>"
+                            data-title="12 | Magnesium" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/jGo1xx4mr8UY_n-ewfC0TfaeORHElxIpOuJkOFb12RP6HAzAc9pLCkHPbAz-eJYdxO2FNIzNP4Sg72LjgNP8xHdTluswoVSIR9MI"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">12 | Magnesium</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a 
+                            href="https://lh3.googleusercontent.com/EHNzolmhm7-PYjcO1xHZzAZ0USYIuXbFfONwEsdvwabji1CzYzdhsDX0M6ufB_2KxkWKQm1eLZ_y4mNg8kx6LNN06Wj1a8gxJ3QoH0w"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : One Neo Supercar</li></ul></ul>"
+                            data-title="One Serial No.: 6" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/EHNzolmhm7-PYjcO1xHZzAZ0USYIuXbFfONwEsdvwabji1CzYzdhsDX0M6ufB_2KxkWKQm1eLZ_y4mNg8kx6LNN06Wj1a8gxJ3QoH0w"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">One Serial No.: 6</span></figcaption>
+                    </figure>
+                    </div>
+                    <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/gvsmNR6aHsayTuoodzeQnElRKgR4Z2S44aDDrN2_Ke4FFoUqbLTTOxQ28oVESvqGgN4cDGwiAWFI9TGpryrxH-AIKQ"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Charlie Litecoin Supercar</li></ul></ul>"
+                            data-title="Charlie Serial No.: 78" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/gvsmNR6aHsayTuoodzeQnElRKgR4Z2S44aDDrN2_Ke4FFoUqbLTTOxQ28oVESvqGgN4cDGwiAWFI9TGpryrxH-AIKQ"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Charlie Serial No.: 78</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/v7aGkoK3X2X3UjlOQkgVJLnYRb0f4HJQLPKvN5UAdHEiKfoiv9Yz363nNg_GL-2OIBbm9399-KYTg_IxKGYN5KNo"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Monera Stealth Supercar</li></ul></ul>"
+                            data-title="Monera Serial No.: 24" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/v7aGkoK3X2X3UjlOQkgVJLnYRb0f4HJQLPKvN5UAdHEiKfoiv9Yz363nNg_GL-2OIBbm9399-KYTg_IxKGYN5KNo"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Monera Serial No.: 24</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/Sg_4-qq4TTGruy9eDMQVew3S-zRTZiu3NJzyVuRU_jd4G524mKATcL1IaDows9oK5nx0-ThyI6M27co1Yxr1gvS0JA-ptV8BimprFQ"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Satoshi Bitcoin Supercar</li></ul></ul>"
+                            data-title="Satoshi Serial No.: 28" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/Sg_4-qq4TTGruy9eDMQVew3S-zRTZiu3NJzyVuRU_jd4G524mKATcL1IaDows9oK5nx0-ThyI6M27co1Yxr1gvS0JA-ptV8BimprFQ"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Satoshi Serial No.: 28</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/xVIqX_wcEmFWZQQ7U_92ql6LIGgfH7WWWgrIcYjA0wcUHPhTrZkycG5jxhRG9HGOirfAWUpOWcv1zSvOLxNsRHX7"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : Vitalik Ethereum Blockchain Supercar</li></ul></ul>"
+                            data-title="Vitalik Serial No.: 48" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/xVIqX_wcEmFWZQQ7U_92ql6LIGgfH7WWWgrIcYjA0wcUHPhTrZkycG5jxhRG9HGOirfAWUpOWcv1zSvOLxNsRHX7"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Vitalik Serial No.: 48</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/aee-pXhihKka4F07sNMYHVcFlWygG2XX9785B1G8fPH8OI6mEgphbtD-fadHAWG0FvADeQKqN7NVrcz1hknroHzff53eUDXX7R-BKMA"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : This is painting #9816. Its full digital image (7680x4320 pixels) can be downloaded free of charge by the token owner at https://www.cryptoarte.io/paintings/9816. This painting represents block numbers 5654016 through 5654591, and the time period starting on 2018-05-21 21:45:36 UTC and ending on 2018-05-22 00:10:40 UTC.</li></ul></ul>"
+                            data-title="Painting #9816" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/aee-pXhihKka4F07sNMYHVcFlWygG2XX9785B1G8fPH8OI6mEgphbtD-fadHAWG0FvADeQKqN7NVrcz1hknroHzff53eUDXX7R-BKMA"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Painting #9816</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/RTP35-ofTE7409S3mT2y6xycVjnTY1cNrpTbXbZsyX-YeOYoBqHkvJjY6ZfLZ3AP5ca4zKlEhMa6Sq2ZoUrhx75LclbYFCQWD-VHOA"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Mage" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/RTP35-ofTE7409S3mT2y6xycVjnTY1cNrpTbXbZsyX-YeOYoBqHkvJjY6ZfLZ3AP5ca4zKlEhMa6Sq2ZoUrhx75LclbYFCQWD-VHOA"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Mage</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/FiPSFHtV2BZw1gOTD3fdKjdAIFEDn_pPzPLRzlzeju23Ji4aspTW0KT90Mq3znjMy-xJFGmouKkkc9I3UoqdyMs11DLaU-Um1tcWGQ"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Half-Elf" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/FiPSFHtV2BZw1gOTD3fdKjdAIFEDn_pPzPLRzlzeju23Ji4aspTW0KT90Mq3znjMy-xJFGmouKkkc9I3UoqdyMs11DLaU-Um1tcWGQ"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Half-Elf</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/OkxcY-4Jc7SRngx1da_SUopcemTQPa76SFpD4PYKaYYoKnEXleus1xsdpkl-0RLQmaeK9EN8ys0s7W6wCyRwrsllvtVKNFLd8qrybA"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Half-Elf" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/OkxcY-4Jc7SRngx1da_SUopcemTQPa76SFpD4PYKaYYoKnEXleus1xsdpkl-0RLQmaeK9EN8ys0s7W6wCyRwrsllvtVKNFLd8qrybA"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Half-Elf</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/IyaZgEhOS-JHOoakorcq43PuDkO41yCcVWgYJVPiJtiXg3Onvf7rS3dXmZ99Dxu0AowGuZi9-t_aCdzzQqT7C78"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Demon" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/IyaZgEhOS-JHOoakorcq43PuDkO41yCcVWgYJVPiJtiXg3Onvf7rS3dXmZ99Dxu0AowGuZi9-t_aCdzzQqT7C78"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Demon</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/rywsKO9-y139ZCVX4tAFrICEc9ILK-tDGny7w2YfW_LLX6K6PdemhLPYzTIIaPrvYQdY_2s64v-S59_2pLwsRHFd7OKewBYm5hNQ"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Orc" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/rywsKO9-y139ZCVX4tAFrICEc9ILK-tDGny7w2YfW_LLX6K6PdemhLPYzTIIaPrvYQdY_2s64v-S59_2pLwsRHFd7OKewBYm5hNQ"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Orc</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/VqUkRFWEzXjJcmoPIoum3BV3sSajAa2yGW_u-Oou3Pk6NdK2MTFQuqaFBZ5fpnU4DjbGaMpzJtyxr5MzSFkGDL3_MorCoLyR0N3luA"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Half-Elf" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/VqUkRFWEzXjJcmoPIoum3BV3sSajAa2yGW_u-Oou3Pk6NdK2MTFQuqaFBZ5fpnU4DjbGaMpzJtyxr5MzSFkGDL3_MorCoLyR0N3luA"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Half-Elf</span></figcaption>
+                    </figure>
+                </div>
+                <div class="grid-item">
+                    <figure><a
+                            href="https://lh3.googleusercontent.com/ra96ForiOQeP1G8_BblEUPkzAyl8GKNNQEJ2JPXK99u9LQ423Rpbhkm1wwqV31r4bSRX9vjB0OooGinjx6SZa_DyIxa3gc55zXsRgA"
+                            class="glightbox-opensea" data-desc-position="right"
+                            data-description="<h6>NFT Description</h6><ul> <li>Description : </li></ul></ul>"
+                            data-title="Demon" data-type="image"><img alt="image"
+                                src="https://lh3.googleusercontent.com/ra96ForiOQeP1G8_BblEUPkzAyl8GKNNQEJ2JPXK99u9LQ423Rpbhkm1wwqV31r4bSRX9vjB0OooGinjx6SZa_DyIxa3gc55zXsRgA"
+                                style=" width: 100%;"></a>
+                        <figcaption style="text-align: center;"><span class="capTitle">Demon</span></figcaption>
+                    </figure>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <div class="IndivNftContainer" style="display: none;">
+
+
+    </div>
+    <div class="Menu">
+        <div class="" style="width:fit-content; float:right;position: absolute;right: 50%; top:5px;">
+            <label class="switch" for="checkbox">
+              <input type="checkbox" id="checkbox" onchange="changeTheme()" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        <div class="FlexHeader">
+                <div class=" my_button Header_connect" id="onboard" >Metamask</div>
+                <div class="ListHover">
+                    <div data-acc="accord1" class="show my_button Header_connect accordHead">Solana connect </div>
+                    <ul id="accord1" class="accord collapsed list-categories">
+                        <li>
+                            <div class=" my_button Header_connect ListBtn" id="phantom_onboard" >Phantom</div>
+                        </li>
+                        <li>
+                            <div class=" my_button Header_connect ListBtn" id="sollet_io_onboard">Sollet io</div>
+                        </li>
+                        <li>
+                            <div class=" my_button Header_connect ListBtn" id="sollet_onboard" >Sollet</div>
+                        </li>
+                        <!---Used to keep list same size as parent due to parent using "fit content" for width-->
+                        <li style="opacity:0;">
+                            <div class="Header_connect my_button" >Solana connect</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+   
+
+    
+</body>
+<script type="text/javascript">
+
+    $(document).ready( function () {
+        $('.accordHead').click(function(){
+            console.log($('#' + $(this).data('acc')).hasClass('collapsed'))
+            if($('#' + $(this).data('acc')).hasClass('collapsed')){
+                $('#' + $(this).data('acc')).removeClass('collapsed')
+            }else{
+                $('#' + $(this).data('acc')).addClass('collapsed')
+            }
+        })
+
+        var $grid = $('.grid').imagesLoaded().done(( function() {
+        $grid.masonry({
+            itemSelector: '.grid-item',
+            //percentPosition: true,
+            columnWidth: '.grid-sizer',
+            isFitWidth: true
+        }); 
+        }))
+        $('.Home').click(function(){
+            $('.IndivNftContainer').fadeOut(function(){
+                $('.IndivNftContainer').empty()
+                $('.nftContainer').fadeIn()
+            })
+            
+        })
+        $('figcaption').click(function(){
+            let currData = $(this).siblings('a').data('description')
+            let currImage = $(this).siblings('a').find('img').clone()
+            let currName = $(this).find('.capTitle').text()
+            $('.loader').addClass('is-active').fadeIn(function(){
+                
+                $('.nftContainer').fadeOut()
+                $('.IndivNftContainer').load('IndividualNFT.html',function(){
+                    $('.NFTData').append(currData)
+                    let description,SellingPrice,CurrPrice
+                    $('.NFTData').find('li').each(function(){
+                        if($(this).text().includes('Description')){
+                            description = $(this).text().split(":")[1]
+                        }
+                        else if($(this).text().includes('Selling')){
+                            SellingPrice = $(this).text().split(":")[1]
+                        }
+                        else if($(this).text().includes('Current')){
+                            CurrPrice = $(this).text().split(":")[1]
+                        }
+                    })
+                    console.log(description,SellingPrice,CurrPrice)
+                    console.log(currImage)
+                    $('.ImgContainer').append(currImage)
+                    $('.NFTName').append(currName)
+                    $('.NFTAmount').append(SellingPrice)
+                    $('.NFTFloor').append(CurrPrice)
+                    $('.IndivNftContainer').fadeIn()
+                    $('.loader').removeClass('is-active')
+                })
+            })
+            
+        })
+        function LoadedStyleChange(){
+            $('.preloadHeader').find('.preloadHeader,.preloadImg,.preloadConnect,.preloadAccounts').removeClass('preloadHeader preloadImg preloadConnect preloadAccounts')
+            $('.preloadHeader').removeClass('preloadHeader')
+        }
+        setTimeout(function(){
+            LoadedStyleChange()
+        },5000)
+
+        
+        $(function () {
+             var $win = $(window);
+             var position = $(window).scrollTop(); 
+             $win.scroll(function () {
+                 console.log($win.scrollTop())
+                 var scroll = $(window).scrollTop();
+                if(scroll > position) {
+                    if ($win.scrollTop() > 50){
+                    $('.header').addClass('headerMoved')
+                    $('.accountsContainer').css('opacity','0').addClass('hide')
+                    $('.header img').css('height','100px')
+                    $('.connectBtnContainer').css('height','100px')
+                 }
+                } else {
+                    if ($win.scrollTop() == 0){
+                        $('.header').removeClass('headerMoved')
+                        $('.header img').css('height','150px')
+                        $('.connectBtnContainer').css('height','150px')
+                        $('.accountsContainer').css('opacity','1').removeClass('hide')
+                    }
+                }
+                
+
+                 position = scroll;
+
+                 
+             });
+             //Theme save
+             let onpageLoad = localStorage.getItem("theme") || "";
+             if(onpageLoad == 'light-mode'){
+                $('#checkbox').attr('checked', 'checked')
+             }
+                    let element = document.body;
+                    element.classList.add(onpageLoad);
+                    document.getElementById("theme").textContent =
+                        localStorage.getItem("theme") || "light";
+                    console.log(onpageLoad)
+         });
+
+         var canvas = document.getElementById('nokey'),
+   can_w = parseInt(canvas.getAttribute('width')),
+   can_h = parseInt(canvas.getAttribute('height')),
+   ctx = canvas.getContext('2d');
+
+// console.log(typeof can_w);
+var BALL_NUM = 30
+
+var ball = {
+      x: 0,
+      y: 0,
+      vx: 0,
+      vy: 0,
+      r: 0,
+      alpha: 1,
+      phase: 0
+   },
+   ball_color = {
+       r: 207,
+       g: 255,
+       b: 4
+   },
+   R = 2,
+   balls = [],
+   alpha_f = 0.03,
+   alpha_phase = 0,
+    
+// Line
+   link_line_width = 0.8,
+   dis_limit = 260,
+   add_mouse_point = true,
+   mouse_in = false,
+   mouse_ball = {
+      x: 0,
+      y: 0,
+      vx: 0,
+      vy: 0,
+      r: 0,
+      type: 'mouse'
+   };
+
+// Random speed
+function getRandomSpeed(pos){
+    var  min = -1,
+       max = 1;
+    switch(pos){
+        case 'top':
+            return [randomNumFrom(min, max), randomNumFrom(0.1, max)];
+            break;
+        case 'right':
+            return [randomNumFrom(min, -0.1), randomNumFrom(min, max)];
+            break;
+        case 'bottom':
+            return [randomNumFrom(min, max), randomNumFrom(min, -0.1)];
+            break;
+        case 'left':
+            return [randomNumFrom(0.1, max), randomNumFrom(min, max)];
+            break;
+        default:
+            return;
+            break;
+    }
+}
+function randomArrayItem(arr){
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+function randomNumFrom(min, max){
+    return Math.random()*(max - min) + min;
+}
+console.log(randomNumFrom(0, 10));
+// Random Ball
+function getRandomBall(){
+    var pos = randomArrayItem(['top', 'right', 'bottom', 'left']);
+    switch(pos){
+        case 'top':
+            return {
+                x: randomSidePos(can_w),
+                y: -R,
+                vx: getRandomSpeed('top')[0],
+                vy: getRandomSpeed('top')[1],
+                r: R,
+                alpha: 1,
+                phase: randomNumFrom(0, 10)
+            }
+            break;
+        case 'right':
+            return {
+                x: can_w + R,
+                y: randomSidePos(can_h),
+                vx: getRandomSpeed('right')[0],
+                vy: getRandomSpeed('right')[1],
+                r: R,
+                alpha: 1,
+                phase: randomNumFrom(0, 10)
+            }
+            break;
+        case 'bottom':
+            return {
+                x: randomSidePos(can_w),
+                y: can_h + R,
+                vx: getRandomSpeed('bottom')[0],
+                vy: getRandomSpeed('bottom')[1],
+                r: R,
+                alpha: 1,
+                phase: randomNumFrom(0, 10)
+            }
+            break;
+        case 'left':
+            return {
+                x: -R,
+                y: randomSidePos(can_h),
+                vx: getRandomSpeed('left')[0],
+                vy: getRandomSpeed('left')[1],
+                r: R,
+                alpha: 1,
+                phase: randomNumFrom(0, 10)
+            }
+            break;
+    }
+}
+function randomSidePos(length){
+    return Math.ceil(Math.random() * length);
+}
+
+// Draw Ball
+function renderBalls(){
+    Array.prototype.forEach.call(balls, function(b){
+       if(!b.hasOwnProperty('type')){
+           ctx.fillStyle = 'rgba(93,228,219,'+b.alpha+')';
+           ctx.beginPath();
+           ctx.arc(b.x, b.y, R, 0, Math.PI*2, true);
+           ctx.closePath();
+           ctx.fill();
+       }
+    });
+}
+
+// Update balls
+function updateBalls(){
+    var new_balls = [];
+    Array.prototype.forEach.call(balls, function(b){
+        b.x += b.vx;
+        b.y += b.vy;
+        
+        if(b.x > -(50) && b.x < (can_w+50) && b.y > -(50) && b.y < (can_h+50)){
+           new_balls.push(b);
+        }
+        
+        // alpha change
+        b.phase += alpha_f;
+        b.alpha = Math.abs(Math.cos(b.phase));
+        // console.log(b.alpha);
+    });
+    
+    balls = new_balls.slice(0);
+}
+
+// loop alpha
+function loopAlphaInf(){
+    
+}
+
+// Draw lines
+function renderLines(){
+    var fraction, alpha;
+    for (var i = 0; i < balls.length; i++) {
+        for (var j = i + 1; j < balls.length; j++) {
+           
+           fraction = getDisOf(balls[i], balls[j]) / dis_limit;
+            
+           if(fraction < 1){
+               alpha = (1 - fraction).toString();
+
+               ctx.strokeStyle = 'rgba(150,150,150,'+alpha+')';
+               ctx.lineWidth = link_line_width;
+               
+               ctx.beginPath();
+               ctx.moveTo(balls[i].x, balls[i].y);
+               ctx.lineTo(balls[j].x, balls[j].y);
+               ctx.stroke();
+               ctx.closePath();
+           }
+        }
+    }
+}
+
+// calculate distance between two points
+function getDisOf(b1, b2){
+    var  delta_x = Math.abs(b1.x - b2.x),
+       delta_y = Math.abs(b1.y - b2.y);
+    
+    return Math.sqrt(delta_x*delta_x + delta_y*delta_y);
+}
+
+// add balls if there a little balls
+function addBallIfy(){
+    if(balls.length < BALL_NUM){
+        balls.push(getRandomBall());
+    }
+}
+
+// Render
+function render(){
+    ctx.clearRect(0, 0, can_w, can_h);
+    
+    renderBalls();
+    
+    renderLines();
+    
+    updateBalls();
+    
+    addBallIfy();
+    
+    window.requestAnimationFrame(render);
+}
+
+// Init Balls
+function initBalls(num){
+    for(var i = 1; i <= num; i++){
+        balls.push({
+            x: randomSidePos(can_w),
+            y: randomSidePos(can_h),
+            vx: getRandomSpeed('top')[0],
+            vy: getRandomSpeed('top')[1],
+            r: R,
+            alpha: 1,
+            phase: randomNumFrom(0, 10)
+        });
+    }
+}
+// Init Canvas
+function initCanvas(){
+    canvas.setAttribute('width', window.innerWidth);
+    canvas.setAttribute('height', window.innerHeight);
+    
+    can_w = parseInt(canvas.getAttribute('width'));
+    can_h = parseInt(canvas.getAttribute('height'));
+}
+window.addEventListener('resize', function(e){
+    console.log('Window Resize...');
+    initCanvas();
+});
+
+function goMovie(){
+    initCanvas();
+    initBalls(BALL_NUM);
+    window.requestAnimationFrame(render);
+}
+goMovie();
+
+// Mouse effect
+canvas.addEventListener('mouseenter', function(){
+    console.log('mouseenter');
+    mouse_in = true;
+    balls.push(mouse_ball);
+});
+canvas.addEventListener('mouseleave', function(){
+    console.log('mouseleave');
+    mouse_in = false;
+    var new_balls = [];
+    Array.prototype.forEach.call(balls, function(b){
+        if(!b.hasOwnProperty('type')){
+            new_balls.push(b);
+        }
+    });
+    balls = new_balls.slice(0);
+});
+canvas.addEventListener('mousemove', function(e){
+    var e = e || window.event;
+    mouse_ball.x = e.pageX;
+    mouse_ball.y = e.pageY;
+    // console.log(mouse_ball);
+});
+
+
+
+        })
+
+       
+    // DOMContentLoaded  end
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="script/main_script_browser.js"></script>
+
+</html>

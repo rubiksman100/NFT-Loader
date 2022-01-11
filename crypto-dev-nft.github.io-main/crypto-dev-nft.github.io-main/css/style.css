@@ -1,0 +1,667 @@
+.hidden{
+    display:none !important;
+}
+/*Hamburger Menu*/
+.arrow{
+    color:white;
+}
+.FlexHeader{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+.accordHead:hover{
+    cursor: pointer;
+}
+.Menu{
+    z-index: 50000000;
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all .5s;
+    background-color: #0f1011;
+    overflow: hidden;
+}
+.Expanded{
+    width: 100vw;
+}
+.Linescontainer {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .Linescontainer{
+      position: fixed;
+      top:10px;
+      right:10px;
+      z-index: 50000001;
+  }
+  .collapsed{
+      height: 0 !important;
+     
+  }
+  .accord{
+      transition:all .5s;
+      height: 300px;
+      overflow: hidden;
+  }
+/*Light Mode*/
+.light-mode{
+    background-color: #ccc  !important;
+    color: black !important;
+}
+.light-mode >  .nftContainer{
+    background-color: #ccc  !important;
+    color: black !important;
+}
+.light-mode figure{
+    background-color: rgb(238, 237, 237)  !important;
+    color: black !important;
+}
+.light-mode .header{
+    background-color: rgb(156, 156, 156)  !important;
+    color: black !important;
+}
+.light-mode .my_button{
+    background-color: rgb(156, 156, 156)  !important;
+    color: black !important;
+}
+.light-mode .list-categories{
+    background-color: rgb(156, 156, 156)  !important;
+    color: black !important;
+}
+.light-mode .Menu{
+    background-color: rgb(156, 156, 156)  !important;
+    color: black !important;
+}
+.light-mode .Indiv_account{
+    background-color: rgb(156, 156, 156)  !important;
+    color: black !important;
+    border-color: black !important;
+}
+.light-mode canvas{
+    background-color: #ccc !important;
+    color: black !important;
+}
+.light-mode .NFTInfoContainer{
+    background-color: #ccc  !important;
+    color: black !important;
+}
+
+canvas{
+
+    background-color: #0f1011;
+}
+body,
+html {
+    /*background-color: var(--container-bg);*/
+   margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+}
+canvas{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+.w3-bar{
+    max-height: 1000px;
+    transition: all 1s;
+}
+
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
+
+ ::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #17191b;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0f1011;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: gray;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #fff;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+
+
+.hidden {
+    /*display: none!important;*/
+    pointer-events: none;  
+    opacity: 0.4;
+}
+/* PRELOAD */ 
+
+.preloadHeader{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.preloadAccounts{
+    display:none !important;
+}
+.preloadConnect{
+    width: fit-content !important;
+}
+.preloadImg{
+    width: fit-content !important;
+}
+.preloadImg > img{
+    
+    height:600px !important;
+}
+#loadedContainer{
+    display:flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+/* Header/Logo Title */
+figure{
+    color: darkgray;
+    border: 1px solid #383838;
+    padding: 11px;
+    border-radius: 8px;
+    background-color: #0f1011;
+    width: 90%;
+    position: relative;
+}
+.row{
+    margin: 0px!important;
+}
+.NFTName,.NFTAmount,.NFTFloor{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+span{
+    border-bottom: solid 1px darkgray;
+    font-size: 25px;
+}
+.NFTInfoContainer{
+    color: darkgray;
+    border: 1px solid #383838;
+    padding: 11px;
+    border-radius: 8px;
+    background-color: #0f1011;
+}
+figcaption{
+    z-index: 980;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: center;
+    display: flex !important;
+    align-items: center;
+    transition: all .2s;
+    opacity: 0;
+    justify-content: center;
+}
+figure:hover figcaption{
+    opacity: 1;
+    cursor: pointer;
+}
+.capTitle{
+    font-size: 25px;
+    color: white;
+    max-width:80%;
+    padding: 5px;
+}
+.grid {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .gridContainer{
+      width: 50%;
+      min-width: 320px;
+      z-index: 2;
+  }
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item {
+    width: 200px;
+  }
+  
+  .grid-item {
+    margin-bottom: 0;
+  }
+  
+  .grid-item img {
+    display: block;
+    width: 100%;
+  }
+  .grid-item figure {
+    display: block;
+    height: 100%;
+  }
+  
+.header img{
+    position: relative;
+    height: 150px;
+    left: 10px;
+    transition: all .3s;
+}
+.header {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transition: all .3s;
+    max-height: 1000px;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: all 1s;
+}
+.headerMoved{
+    
+    top: 0;
+    width: 100%;
+}
+
+.nftContainer{
+    background-color: #17191b !important;
+    margin-top: 180px;
+}
+.IndivNftContainer{
+    margin-top: 180px;
+}
+
+.Home:hover{
+    cursor: pointer;
+}
+.HeaderImgContainer{
+    width: 20%;
+    float: left;
+}
+.connectBtnContainer{
+    justify-content: right;
+    display: flex;
+    width: 80%;
+    height: 150px;
+    align-items: flex-end;
+    align-items: center;
+    transition: all .3s;
+}
+
+.hes-gallery {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    /* fit as many columns as possible, 180px wide each: */
+    grid-template-columns: repeat(auto-fill, 180px);
+    /* each row is 20px high -- we always span 2+ */
+    grid-auto-rows: minmax(20px, auto);
+    justify-content: center;	
+}
+.hes-gallery > * {
+    width: 180px;
+    /* only for older non-grid browsers: */
+    float: left;  
+    /* only for older non-grid browsers: */
+    margin: 15px;
+  }
+.hes-gallery img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    cursor: pointer;
+    
+    border: solid;
+    border-color: var(--secondary-bg);
+}
+
+.hes-gallery video {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    cursor: pointer;
+    border: solid;
+    border-color: var(--secondary-bg);
+    vertical-align: bottom;
+}
+
+.hes-gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 2px 2px 6px #555;
+}
+
+.hes-gallery video:hover {
+    transform: scale(1.04);
+    box-shadow: 2px 2px 6px #555;
+}
+
+.hes-gallery figcaption {
+    color: var(--primary-text);
+    background-color: var(--secondary-bg);
+    font-style: italic;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-variant: small-caps;
+    text-align: center;
+    color: #ffffff;
+    font-size: 3em;
+}
+
+p {
+    margin: 0;
+}
+
+#scrollToTopBtn {
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 48px;
+}
+
+.autohide {
+    /*position: fixed;*/
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.ListHover{
+    width: fit-content;
+}
+/*
+.ListHover:hover  ul.list-categories,
+.ListHover:active  ul.list-categories {
+    max-height: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    
+}
+*/
+.list-categories {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    /*
+    max-height: 0px;
+    display: none;
+    */
+    position: fixed;
+    overflow: hidden;
+    background-color: #0f1011;
+    width: fit-content;
+    transition: all 1s;
+}
+.ListBtn{
+    width: 100%;
+}
+.Container {
+    /*background: var(--container-bg);*/
+    color: var(--primary-text);
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+    overflow: auto;
+}
+
+.my_button {
+    text-align: center;
+    overflow: hidden;
+    min-width: fit-content;
+    padding:5px;
+    font-weight: bold;
+    background: none;
+    color: rgb(192, 192, 192);
+    
+    border-bottom: #0f1011 solid 3px;
+    margin-right: 10px;
+    transition: all .3s;
+    
+}
+.my_button:hover{
+    cursor: pointer;
+    border-bottom: white solid 3px;;
+}
+.my_button:disabled,
+button[disabled] {
+    opacity: .5;
+    pointer-events: none
+}
+
+.Header_header {
+    background: var(--secondary-bg);
+    color: var(--primary-text);
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: grid;
+}
+
+
+
+.Header_header .Header_logoWrapper__ylfqS>img {
+    height: 80px
+}
+
+.Header_header .Header_wrapper {
+    display: -moz-box;
+    display: flex;
+    -moz-box-align: end;
+    align-items: flex-end;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column
+}
+
+
+
+.Header_header .Header_wrapper .Header_actions {
+    margin-bottom: 10px
+}
+#accounts:hover{
+    cursor: pointer;
+}
+.accountsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width: 100%;
+    justify-content: flex-end;
+    height: 30px;
+    transition: all 1s;
+}
+.Indiv_account{
+ width: fit-content;
+ height: fit-content;
+}
+#accounts{
+    color: var(--panel-text);
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.Rewards_rewards {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: var(--panel-bg);
+    color: var(--panel-text);
+    line-height: 32px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: var(--panel-shadow);
+    border: 1px solid var(--panel-border);
+    padding: 19px 0;
+    backdrop-filter: blur(60px);
+    display: -moz-box;
+    display: flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+
+
+.Rewards_rewards p {
+    margin: 0;
+    padding: 0
+}
+
+.index_content {
+    display: -moz-box;
+    display: flex;
+    -moz-box-align: start;
+    align-items: flex-start;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-sizing: border-box;
+    padding: 0 60px;
+    min-height: 700px;
+    box-sizing: border-box
+}
+
+
+
+
+
+.index_content .index_main {
+    display: -moz-box;
+    display: flex;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -moz-box-flex: 1;
+    flex-grow: 1;
+    margin: 0 20px;
+    height: 100%;
+    min-height: 700px
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charSet="utf-8" />
+    <meta name="next-head-count" content="3" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Pulsar</h1>
+        <p>Universal NFT viewer</p>
+        <img src="/img/logo.png" alt="Logo" style="width:15%">
+    </div>
+    <div class="Container">
+        <div class="Header_header w3-bar w3-padding w3-card autohide navbar">
+            <div class="w3-bar">
+                <div class="Header_actions w3-padding"
+                    style="display: flex; place-self: center; justify-content: center;">
+                    <button class=" my_button Header_connect" id="onboard" tabindex="0" type="button">
+                        <span class="MuiButton-label">Metamask Connect</span>
+                    </button>
+                    <button class=" my_button Header_connect" id="onboardWax" tabindex="0" type="button">
+                        <span class="MuiButton-label">Wax Connect</span>
+                    </button>
+                    <div class="show my_button Header_connect">
+                        <span>Solana connect </span>
+                        <ul class="list-categories">
+                            <li>
+                                <button class=" my_button Header_connect" id="phantom_onboard" tabindex="0"
+                                    type="button">Phantom connect
+                            </li>
+                            <li>
+                                <button class=" my_button Header_connect" id="sollet_io_onboard" tabindex="0"
+                                    type="button">Sollet io connect
+                            </li>
+                            <li>
+                                <button class=" my_button Header_connect" id="sollet_onboard" tabindex="0"
+                                    type="button">Sollet connect
+                            </li>
+                        </ul>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="account_1111">
+                Account: <span id="accounts"></span>
+            </div>
+        </div>
+        <div id="nft_test">
+            <p class="info-text alert alert-secondary"> Nft data will appear here !</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        el_autohide = document.querySelector('.autohide');
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        //document.body.style.paddingTop = navbar_height + 'px';
+        if (el_autohide) {
+            var last_scroll_top = 0;
+            window.addEventListener('scroll', function () {
+                let scroll_top = window.scrollY;
+                if (scroll_top <= last_scroll_top) {
+                    el_autohide.classList.remove('scrolled-down');
+                    el_autohide.classList.add('scrolled-up');
+                }
+                else {
+                    el_autohide.classList.remove('scrolled-up');
+                    el_autohide.classList.add('scrolled-down');
+                }
+                last_scroll_top = scroll_top;
+            });
+            // window.addEventListener
+        }
+        // if
+    });
+    // DOMContentLoaded  end
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="script/main_script_browser.js"></script>
+
+</html>
